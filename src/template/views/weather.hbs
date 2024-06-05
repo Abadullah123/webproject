@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {{>headerlinks}}
+  </head>
+  <body class="p-3 m-0 border-0 bd-example m-0 border-0">
+          
+          {{>navbar}}
+
+        <!-- main header -->
+        <div class="container-fluid main_header">
+            <div class="row">
+                <div class="col-md-10 col-12 mx-auto"> 
+                   <div class="main_coaintant">
+                     <form class="temp_from">
+                        <input type="text" placeholder="enter your city name" id="cityName" autocomplete="off">
+                        <input type="submit" value="search" id="submitBtn">
+                     </form>
+                   </div>
+
+                   <div class="temInfo">
+                    <div class="top_layer">
+                        <p id="day">Monday</p>
+                        <p id="today_data"> <span id="today_day"> 31 </span> <span id="today_month">May </span> </p>
+
+                    </div>
+                    <div class="main_layer">
+                        <p id="city_name">Get output here</p>
+                        <div class="middle_layer data_hide">
+                            <p id="temp"><span id="temp_real_val">0</span><sup>o</sup>C</p>
+                            <p id="temp_stat"><i class="fa fa-cloud" aria-hidden="true"></i></p>
+                        </div>
+                    </div>
+                   </div>
+                </div>
+            </div>
+        </div>                   
+                
+
+                <!-- footer -->
+                  {{>footer}}
+                      <script src="js/index.js"></script>
+
+                      {{!-- day code in js  --}}
+                      <script>
+                            
+                        const getCurrentDay= () =>{
+                          let weekday = new Array(7);
+                          weekday[0] = "sunday"
+                          weekday[1] = "Monday"
+                          weekday[2] = "Tuesday"
+                          weekday[3] = "Wednesday"
+                          weekday[4] = "Thursday"
+                          weekday[5] = "Friday"
+                          weekday[6] = "sturday"
+
+                               
+                          let month = [
+                          "Jan",
+                          "Feb",
+                          "Apr",
+                          "Mar",
+                          "June",
+                          "July",
+                          "Aug",
+                          "Sept",
+                          "oct",
+                          "Nov",
+                          "Dec"
+                          ];
+
+                          let currentTime = new Date();
+                          let days = weekday[currentTime.getDay()]
+                           let day= document.getElementById('day');
+
+                          day.innerText = days;
+                            
+                            var data = currentTime.getDate();
+                            const  today_day = document.getElementById("today_day");
+                            today_day.innerHTML = data
+                           var months = month[currentTime.getMonth()]; 
+                           const today_month = document.getElementById("today_month");
+                           today_month.innerHTML = months;
+                           console.log(months)
+
+
+                       
+
+                        }
+
+                        getCurrentDay();
+
+                       
+
+                      </script>
+</body>
+</html>

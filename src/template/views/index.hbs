@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {{>headerlinks}}
+  </head>
+  <body class="p-3 m-0 border-0 bd-example m-0 border-0">
+          
+          {{>navbar}}
+
+        <!-- main header -->
+        <div class="container-fluid main_header">
+            <div class="row">
+                <div class="col-md-10 col-12 mx-auto"> 
+                    <div class="row">
+                        <!-- left side div -->
+                        <div class="col-md-6 col-12 main-header-left">
+                           <p> Welcome to WeatherApp </p>
+                            <h3> Get The Latest <span class="text_color"> Weather </span> Info Of Your City </h3>
+                            <a href="/weather"><button>check</button></a >
+                        </div>
+                        <!-- right side div -->
+                        <div class="col-md-6 col-12 main-header-right ">
+                            <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-inner">
+                                  <div class="carousel-item active" data-bs-interval="1000">
+                                    <img src="./images/man.png" class=" w-10" alt="First slide">
+                                  </div>
+                                  <div class="carousel-item" data-bs-interval="2000">
+                                    <img src="./images/man1.png" class=" w-10" alt="Second slide">
+
+                                  </div>
+                                  <div class="carousel-item" data-bs-interval="3000">
+                                    <img src="./images/man2.png" class=" w-10" alt="Third slide">
+                                  </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+                                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                  <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+                                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                  <span class="visually-hidden">Next</span>
+                                </button>
+                              </div>                                   
+                        </div>
+                
+
+                        <!-- footer -->
+                        {{>footer}}
+                      
+</body>
+</html>
